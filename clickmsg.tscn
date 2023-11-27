@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dagsidc81nffm"]
+
+[ext_resource type="Script" path="res://clickmsg.gd" id="1_dls5d"]
+
+[node name="clickmsg" type="Node2D"]
+script = ExtResource("1_dls5d")
+
+[node name="Labelamount" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

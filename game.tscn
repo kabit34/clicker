@@ -1,0 +1,181 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8rs6mciklapb"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_25le1"]
+[ext_resource type="Texture2D" uid="uid://b5nuylcy36by2" path="res://Background/Background.png" id="1_26g6p"]
+[ext_resource type="Texture2D" uid="uid://duromr1mn82fp" path="res://256x256/Daggers/Dagger1.png" id="2_i1xjh"]
+[ext_resource type="Texture2D" uid="uid://bgg6m5t653lll" path="res://tree/medium.png" id="3_eoyyp"]
+[ext_resource type="Texture2D" uid="uid://p5141gtgegso" path="res://click/long.png" id="5_dgmk8"]
+[ext_resource type="Texture2D" uid="uid://b063ljp31hcvf" path="res://click/cancel.png" id="6_fc8ow"]
+[ext_resource type="Texture2D" uid="uid://dt37hj8nhheql" path="res://click/shop.png" id="7_j6uuk"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_25le1")
+metadata/_edit_horizontal_guides_ = [400.0]
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = -5
+
+[node name="BG" type="Sprite2D" parent="UI"]
+scale = Vector2(1, 2.94118)
+texture = ExtResource("1_26g6p")
+centered = false
+
+[node name="tap bar" type="Sprite2D" parent="UI"]
+position = Vector2(-4.57764e-05, 3.8147e-06)
+scale = Vector2(0.231437, 0.165389)
+texture = ExtResource("3_eoyyp")
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(480, 800)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="clicker buton" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -126.0
+offset_right = 106.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_i1xjh")
+texture_pressed = ExtResource("2_i1xjh")
+
+[node name="Labeliteam" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 40.0
+offset_right = 275.0
+offset_bottom = 69.0002
+size_flags_vertical = 0
+text = "(iteam)"
+horizontal_alignment = 1
+
+[node name="Labeliteampersecound" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 64.0
+offset_right = 289.0
+offset_bottom = 93.0002
+size_flags_vertical = 0
+text = "(iteam /s)"
+horizontal_alignment = 1
+
+[node name="Menushop" type="MenuButton" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Menushop"]
+position = Vector2(240, 400)
+scale = Vector2(0.160645, 0.748571)
+texture = ExtResource("5_dgmk8")
+
+[node name="cancel" type="TextureButton" parent="Control/Menushop"]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 173.0
+offset_right = 1064.0
+offset_bottom = 874.0
+scale = Vector2(0.065, 0.065)
+texture_normal = ExtResource("6_fc8ow")
+
+[node name="Box" type="VBoxContainer" parent="Control/Menushop"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 221.0
+offset_right = 2146.0
+offset_bottom = 922.0
+scale = Vector2(0.16, 0.16)
+
+[node name="TextureButton" type="TextureButton" parent="Control/Menushop/Box"]
+layout_mode = 2
+texture_normal = ExtResource("3_eoyyp")
+
+[node name="Label" type="Label" parent="Control/Menushop/Box/TextureButton"]
+layout_mode = 0
+offset_left = 1518.75
+offset_top = 468.75
+offset_right = 1875.75
+offset_bottom = 608.75
+theme_override_font_sizes/font_size = 100
+text = "GPS: +1"
+
+[node name="Labelprice" type="Label" parent="Control/Menushop/Box/TextureButton"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 469.0
+offset_right = 495.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 100
+text = "PRICE"
+
+[node name="Labellvl" type="Label" parent="Control/Menushop/Box/TextureButton"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 75.0
+offset_right = 495.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 100
+text = "LVL:"
+
+[node name="TextureButton2" type="TextureButton" parent="Control/Menushop/Box"]
+layout_mode = 2
+texture_normal = ExtResource("3_eoyyp")
+
+[node name="Label" type="Label" parent="Control/Menushop/Box/TextureButton2"]
+layout_mode = 0
+offset_left = 1518.75
+offset_top = 468.75
+offset_right = 1875.75
+offset_bottom = 608.75
+theme_override_font_sizes/font_size = 100
+text = "GPS: +3"
+
+[node name="Labelprice" type="Label" parent="Control/Menushop/Box/TextureButton2"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 469.0
+offset_right = 495.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 100
+text = "PRICE"
+
+[node name="Labellvl" type="Label" parent="Control/Menushop/Box/TextureButton2"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 75.0
+offset_right = 495.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 100
+text = "LVL:"
+
+[node name="shop" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 699.0
+offset_right = 3304.0
+offset_bottom = 1400.0
+scale = Vector2(0.145, 0.145)
+texture_normal = ExtResource("7_j6uuk")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Control/clicker buton" to="." method="_on_clicker_buton_pressed"]
+[connection signal="pressed" from="Control/Menushop/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Control/Menushop/Box/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/Menushop/Box/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Control/shop" to="." method="_on_shop_pressed"]
